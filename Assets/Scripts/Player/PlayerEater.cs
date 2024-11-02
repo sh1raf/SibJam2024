@@ -13,8 +13,6 @@ public class PlayerEater : MonoBehaviour
 
     private int _smokeCount;
 
-    //private Vector2 defaultSize = new Vector2(1,1);
-
     private void Awake()
     {
         _movement = GetComponentInParent<PlayerMovement>();
@@ -25,7 +23,6 @@ public class PlayerEater : MonoBehaviour
     {
         if (Input.GetKeyDown(eatKey))
             Eat();
-
     }
 
     private void Eat()
