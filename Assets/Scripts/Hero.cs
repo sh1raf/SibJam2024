@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Hero : MonoBehaviour
 {
@@ -10,8 +11,13 @@ public class Hero : MonoBehaviour
 
     private List<Transform> _path = new();
 
+    private NavMeshAgent _agent;
+
     private void Start()
     {
+        _agent = GetComponent<NavMeshAgent>();
+        _agent.updateRotation = false;
+        _agent.updateUpAxis = false;
         Settings = GetComponent<BuffSettings>();
         _map = FindObjectOfType<Map>();
         BuildRandomPath();
@@ -25,6 +31,21 @@ public class Hero : MonoBehaviour
             int randomIndex = Random.Range(0, NoUsedIndexes.Count);
             _path.Add(_map.Chests[NoUsedIndexes[randomIndex]].transform);
             NoUsedIndexes.RemoveAt(randomIndex);
+        }
+
+        StartCoroutine(Going());
+    }
+
+    private IEnumerator Going()
+    {
+        for(int i = 0; i < _path.Count; i++)
+        {
+            _agent.SetDestination(_path[i].position);
+            while(Vector2.Distance(transform.position, _path[i].position) > 0.01f)
+            {
+
+                yield return null;
+            }
         }
     }
 }

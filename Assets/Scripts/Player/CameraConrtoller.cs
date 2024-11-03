@@ -14,7 +14,7 @@ public class CameraConrtoller : MonoBehaviour
 
     private Vector2 _camPos { get { return new Vector2(transform.position.x, transform.position.y); }}
 
-    private void Update()
+    private void LateUpdate()
     {
         float distance = Vector2.Distance(_camPos, _target.position);
         if(distance > maxDistanceToTarget && !_focusing)

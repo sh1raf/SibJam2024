@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _movementDirection;
 
     private Animator _animator;
+    private Rigidbody2D _rb;
 
     private Vector2 _inputMulti;
 
@@ -21,12 +22,13 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _rb = GetComponent<Rigidbody2D>();
         _inputMulti = new Vector2(1,1);
 
         _currentSpeed = defaultSpeed;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (!_canMove)
             return;
@@ -75,7 +77,8 @@ public class PlayerMovement : MonoBehaviour
                 _animator.Play("Idle");
         }
 
-        transform.Translate(_movementDirection);
+        //transform.Translate(_movementDirection);
+        _rb.MovePosition(new Vector2(transform.position.x, transform.position.y) + _movementDirection);
     }
 
     public void Freeze()
