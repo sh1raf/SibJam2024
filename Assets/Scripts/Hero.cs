@@ -5,13 +5,14 @@ using UnityEngine;
 public class Hero : MonoBehaviour
 {
     [field: SerializeField] public Buff Buff { get; private set; } = Buff.None;
-
+    public BuffSettings Settings { get; private set; }
     private Map _map;
 
     private List<Transform> _path = new();
 
     private void Start()
     {
+        Settings = GetComponent<BuffSettings>();
         _map = FindObjectOfType<Map>();
         BuildRandomPath();
     }
@@ -32,6 +33,7 @@ public enum Buff
 {
     None,
     Drunk,
-    Smoke
-
+    Smoke,
+    SpeedBoost,
+    FoodQuality
 }

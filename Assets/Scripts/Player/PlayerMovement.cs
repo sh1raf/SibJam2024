@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    [SerializeField] private float defaultSpeed;
 
     public Vector2 MovementDirection { get { return _movementDirection; } private set { } }
 
@@ -15,18 +15,25 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 _inputMulti;
 
+    private bool _canMove = true;
+    private float _currentSpeed;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
-
         _inputMulti = new Vector2(1,1);
+
+        _currentSpeed = defaultSpeed;
     }
 
     private void Update()
     {
+        if (!_canMove)
+            return;
+
         _inputVector = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * _inputMulti;
         _movementDirection = _inputVector.normalized;
-        _movementDirection *= speed * Time.deltaTime;
+        _movementDirection *= _currentSpeed * Time.deltaTime;
 
         if (_movementDirection.x > 0)
         {
@@ -71,7 +78,30 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(_movementDirection);
     }
 
+    public void Freeze()
+    {
+        _animator.Play("Idle");
+        _canMove = false;
+    }
 
+    public void UnFreeze()
+    {
+        _canMove = true;
+    }
+
+    public void SpeedBoost(float multi, float duration)
+    {
+        StartCoroutine(SpeedBoosting(multi, duration));
+    }
+
+    private IEnumerator SpeedBoosting(float multi, float duration)
+    {
+        _currentSpeed *= multi;
+
+        yield return new WaitForSeconds(duration);
+
+        _currentSpeed *= 1 / multi;
+    }
 
     public void Drunk(float duration)
     {
