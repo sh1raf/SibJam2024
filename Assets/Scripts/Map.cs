@@ -5,8 +5,7 @@ using UnityEngine;
 public class Map : MonoBehaviour
 {
     [SerializeField] private Transform start;
-    [SerializeField] private Transform end;
-
+    [field: SerializeField] public Transform End { get; private set; }
     public List<Chest> Chests { get; private set; } = new();
 
     private void Awake()

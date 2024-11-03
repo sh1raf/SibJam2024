@@ -32,6 +32,7 @@ public class Hero : MonoBehaviour
             _path.Add(_map.Chests[NoUsedIndexes[randomIndex]].transform);
             NoUsedIndexes.RemoveAt(randomIndex);
         }
+        _path.Add(_map.End);
 
         StartCoroutine(Going());
     }
