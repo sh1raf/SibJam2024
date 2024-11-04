@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ScoreController.cs" />
+    <Compile Include="Assets\Scripts\EndLvlButtons\RestartButton.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerEater.cs" />
     <Compile Include="Assets\Scripts\Chest.cs" />
     <Compile Include="Assets\Scripts\BuffS\SettingsWithMulti.cs" />
@@ -75,8 +76,10 @@
     <Compile Include="Assets\Scripts\LevelSO.cs" />
     <Compile Include="Assets\Scripts\LevelsController.cs" />
     <Compile Include="Assets\Scripts\SmokeHolder.cs" />
+    <Compile Include="Assets\Scripts\EndLvlButtons\NextLvlButton.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerLiveLogic.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
+    <Compile Include="Assets\Scripts\EndLvlButtons\MainMenuButton.cs" />
     <Compile Include="Assets\Scripts\BuffS\BuffSettings.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\DestroyDelay.cs" />
