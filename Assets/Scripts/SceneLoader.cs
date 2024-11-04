@@ -32,6 +32,11 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(LoadingFill());
     }
 
+    public void LoadMenu()
+    {
+        LoadScene(0);
+    }
+
     public void LoadScene(int SceneNumber)
     {
         loadScreen.SetActive(true);

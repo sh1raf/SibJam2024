@@ -13,11 +13,11 @@ public class PlayerLiveLogic : MonoBehaviour
     private int _smokeCount;
 
     private PlayerMovement _playerMovement;
-    private Map _map;
+    private DungeonGenerator _map;
 
     private void Awake()
     {
-        _map = FindObjectOfType<Map>();
+        _map = FindObjectOfType<DungeonGenerator>();
         _playerMovement = GetComponent<PlayerMovement>();
 
         _currentHealth = maxHealth;

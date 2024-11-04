@@ -7,7 +7,7 @@ public class Hero : MonoBehaviour
 {
     [field: SerializeField] public Buff Buff { get; private set; } = Buff.None;
     public BuffSettings Settings { get; private set; }
-    private Map _map;
+    private DungeonGenerator _map;
 
     private List<Transform> _path = new();
 
@@ -23,7 +23,14 @@ public class Hero : MonoBehaviour
         _agent.updateUpAxis = false;
         _animator = GetComponent<Animator>();
         Settings = GetComponent<BuffSettings>();
-        _map = FindObjectOfType<Map>();
+        _map = FindObjectOfType<DungeonGenerator>();
+        StartCoroutine(Initialize());
+    }
+
+    private IEnumerator Initialize()
+    {
+        yield return new WaitForSeconds(1);
+
         BuildRandomPath();
     }
 

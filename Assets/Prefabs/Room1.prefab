@@ -3027,8 +3027,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86cd2e68a04ce7e429fdff99a2e5e5e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 0}
-  ends: []
+  exits: 
+  chest: {fileID: 4711628190562411381, guid: 42c6615fd1b866a4fab5ec6781058fd4, type: 3}
+  gaps: []
   Size: {x: 11, y: 5.5}
 --- !u!1 &5434425030409538542
 GameObject:
