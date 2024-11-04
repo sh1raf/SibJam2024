@@ -46,20 +46,32 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: WallUp
+  - name: WallUp Outside
+    uniqueID: 2937539353
+    locked: 0
+  - name: WallUp Inside
     uniqueID: 4082731287
     locked: 0
-  - name: WallLeft
+  - name: WallLeft Inside
     uniqueID: 2912582741
     locked: 0
-  - name: WallRight
+  - name: WallLeft Outside
+    uniqueID: 4040994253
+    locked: 0
+  - name: WallRight Outside
+    uniqueID: 521894733
+    locked: 0
+  - name: WallRight Inside
     uniqueID: 1918822327
+    locked: 0
+  - name: WallDown Inside
+    uniqueID: 2144125601
+    locked: 0
+  - name: WallDown Outside
+    uniqueID: 2895313441
     locked: 0
   - name: Player
     uniqueID: 3800951541
-    locked: 0
-  - name: WallDown
-    uniqueID: 2144125601
     locked: 0
   - name: Roof
     uniqueID: 2973415899
