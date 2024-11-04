@@ -18,6 +18,8 @@ public class PlayerEater : MonoBehaviour
 
     private Animator _animator;
 
+    private ScoreController _scoreController;
+
     private bool _canEat = true;
 
     private void Awake()
@@ -27,6 +29,7 @@ public class PlayerEater : MonoBehaviour
         _level = FindObjectOfType<LevelsController>();
         _animator = GetComponentInParent<Animator>();
         _currentCooldown = defaultCooldown;
+        _scoreController = new ScoreController();
     }
 
     private void Update()
@@ -55,6 +58,8 @@ public class PlayerEater : MonoBehaviour
     {
         if (_targets.Count <= 0)
             return;
+
+        _scoreController.AddEatScore();
 
         switch (hero.Buff)
         {
