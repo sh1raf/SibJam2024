@@ -78,7 +78,10 @@ public class HeroFieldOfView : MonoBehaviour
         if(_canSeePlayer)
             Gizmos.DrawRay(transform.position, _target.position - transform.position);
         if(_hero != null)
+        {
             Gizmos.DrawRay(transform.position, _hero.Direction);
+
+        }
     }
 
     private void Find()

@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\mrshr\\SibJam2024\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BBBDDCA4-DAE7-FFF3-7730-7D7B68EF65EC}|Assembly-CSharp.csproj|c:\\users\\mrshr\\sibjam2024\\assets\\sendproject\\dungeon\\roomtemplates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBBDDCA4-DAE7-FFF3-7730-7D7B68EF65EC}|Assembly-CSharp.csproj|solutionrelative:assets\\sendproject\\dungeon\\roomtemplates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BBBDDCA4-DAE7-FFF3-7730-7D7B68EF65EC}|Assembly-CSharp.csproj|c:\\users\\mrshr\\sibjam2024\\assets\\scripts\\dungeongeneration\\dungeongenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBBDDCA4-DAE7-FFF3-7730-7D7B68EF65EC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dungeongeneration\\dungeongenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBBDDCA4-DAE7-FFF3-7730-7D7B68EF65EC}|Assembly-CSharp.csproj|c:\\users\\mrshr\\sibjam2024\\assets\\sendproject\\dungeon\\roomspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBBDDCA4-DAE7-FFF3-7730-7D7B68EF65EC}|Assembly-CSharp.csproj|solutionrelative:assets\\sendproject\\dungeon\\roomspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BBBDDCA4-DAE7-FFF3-7730-7D7B68EF65EC}|Assembly-CSharp.csproj|c:\\users\\mrshr\\sibjam2024\\assets\\scripts\\dungeongeneration\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBBDDCA4-DAE7-FFF3-7730-7D7B68EF65EC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dungeongeneration\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBBDDCA4-DAE7-FFF3-7730-7D7B68EF65EC}|Assembly-CSharp.csproj|c:\\users\\mrshr\\sibjam2024\\assets\\scripts\\player\\playereater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BBBDDCA4-DAE7-FFF3-7730-7D7B68EF65EC}|Assembly-CSharp.csproj|C:\\Users\\mrshr\\SibJam2024\\assets\\scripts\\player\\playereater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BBBDDCA4-DAE7-FFF3-7730-7D7B68EF65EC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playereater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mrshr\\SibJam2024\\Library\\PackageCache\\com.unity.2d.tilemap@1.0.0\\Editor\\UI\\SceneViewOpenTilePaletteOverlay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.2d.tilemap@1.0.0\\Editor\\UI\\SceneViewOpenTilePaletteOverlay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BBBDDCA4-DAE7-FFF3-7730-7D7B68EF65EC}|Assembly-CSharp.csproj|C:\\Users\\mrshr\\SibJam2024\\assets\\scripts\\player\\playerlivelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BBBDDCA4-DAE7-FFF3-7730-7D7B68EF65EC}|Assembly-CSharp.csproj|C:\\Users\\mrshr\\SibJam2024\\assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BBBDDCA4-DAE7-FFF3-7730-7D7B68EF65EC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBBDDCA4-DAE7-FFF3-7730-7D7B68EF65EC}|Assembly-CSharp.csproj|C:\\Users\\mrshr\\SibJam2024\\assets\\scripts\\herofieldofview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBBDDCA4-DAE7-FFF3-7730-7D7B68EF65EC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\herofieldofview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BBBDDCA4-DAE7-FFF3-7730-7D7B68EF65EC}|Assembly-CSharp.csproj|C:\\Users\\mrshr\\SibJam2024\\assets\\scripts\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,56 +79,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RoomTemplates.cs",
-              "DocumentMoniker": "C:\\Users\\mrshr\\SibJam2024\\Assets\\SendProject\\Dungeon\\RoomTemplates.cs",
-              "RelativeDocumentMoniker": "Assets\\SendProject\\Dungeon\\RoomTemplates.cs",
-              "ToolTip": "C:\\Users\\mrshr\\SibJam2024\\Assets\\SendProject\\Dungeon\\RoomTemplates.cs",
-              "RelativeToolTip": "Assets\\SendProject\\Dungeon\\RoomTemplates.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAeAAAA",
+              "Title": "DungeonGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\mrshr\\SibJam2024\\Assets\\Scripts\\DungeonGeneration\\DungeonGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DungeonGeneration\\DungeonGenerator.cs",
+              "ToolTip": "C:\\Users\\mrshr\\SibJam2024\\Assets\\Scripts\\DungeonGeneration\\DungeonGenerator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DungeonGeneration\\DungeonGenerator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:08:47.744Z",
+              "WhenOpened": "2024-11-04T10:04:09.956Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RoomSpawner.cs",
-              "DocumentMoniker": "C:\\Users\\mrshr\\SibJam2024\\Assets\\SendProject\\Dungeon\\RoomSpawner.cs",
-              "RelativeDocumentMoniker": "Assets\\SendProject\\Dungeon\\RoomSpawner.cs",
-              "ToolTip": "C:\\Users\\mrshr\\SibJam2024\\Assets\\SendProject\\Dungeon\\RoomSpawner.cs",
-              "RelativeToolTip": "Assets\\SendProject\\Dungeon\\RoomSpawner.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAjwE0AAAAvAAAA",
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\Users\\mrshr\\SibJam2024\\Assets\\Scripts\\DungeonGeneration\\Room.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DungeonGeneration\\Room.cs",
+              "ToolTip": "C:\\Users\\mrshr\\SibJam2024\\Assets\\Scripts\\DungeonGeneration\\Room.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DungeonGeneration\\Room.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:01:33.163Z",
+              "WhenOpened": "2024-11-04T10:00:28.349Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SceneViewOpenTilePaletteOverlay.cs",
-              "DocumentMoniker": "C:\\Users\\mrshr\\SibJam2024\\Library\\PackageCache\\com.unity.2d.tilemap@1.0.0\\Editor\\UI\\SceneViewOpenTilePaletteOverlay.cs",
-              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.2d.tilemap@1.0.0\\Editor\\UI\\SceneViewOpenTilePaletteOverlay.cs",
-              "ToolTip": "C:\\Users\\mrshr\\SibJam2024\\Library\\PackageCache\\com.unity.2d.tilemap@1.0.0\\Editor\\UI\\SceneViewOpenTilePaletteOverlay.cs",
-              "RelativeToolTip": "Library\\PackageCache\\com.unity.2d.tilemap@1.0.0\\Editor\\UI\\SceneViewOpenTilePaletteOverlay.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T07:23:26.746Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HeroFieldOfView.cs",
-              "DocumentMoniker": "C:\\Users\\mrshr\\SibJam2024\\Assets\\Scripts\\HeroFieldOfView.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\HeroFieldOfView.cs",
-              "ToolTip": "C:\\Users\\mrshr\\SibJam2024\\Assets\\Scripts\\HeroFieldOfView.cs",
-              "RelativeToolTip": "Assets\\Scripts\\HeroFieldOfView.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAowEQAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T12:35:04.214Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 10,
               "Title": "SceneLoader.cs",
               "DocumentMoniker": "C:\\Users\\mrshr\\SibJam2024\\Assets\\Scripts\\SceneLoader.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SceneLoader.cs",
@@ -148,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "Level.cs",
               "DocumentMoniker": "C:\\Users\\mrshr\\SibJam2024\\Assets\\Scripts\\Level.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Level.cs",
@@ -160,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
               "Title": "LevelSO.cs",
               "DocumentMoniker": "C:\\Users\\mrshr\\SibJam2024\\Assets\\Scripts\\LevelSO.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LevelSO.cs",
@@ -172,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "LevelsController.cs",
               "DocumentMoniker": "C:\\Users\\mrshr\\SibJam2024\\Assets\\Scripts\\LevelsController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LevelsController.cs",
@@ -184,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 14,
               "Title": "SettingsWithMulti.cs",
               "DocumentMoniker": "C:\\Users\\mrshr\\SibJam2024\\Assets\\Scripts\\BuffS\\SettingsWithMulti.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BuffS\\SettingsWithMulti.cs",
@@ -196,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 15,
               "Title": "SmokeHolder.cs",
               "DocumentMoniker": "C:\\Users\\mrshr\\SibJam2024\\Assets\\Scripts\\SmokeHolder.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SmokeHolder.cs",
@@ -208,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "Hero.cs",
               "DocumentMoniker": "C:\\Users\\mrshr\\SibJam2024\\Assets\\Scripts\\Hero.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Hero.cs",
@@ -228,12 +196,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerEater.cs",
               "ViewState": "AQIAAFAAAAAAAAAAAIAwwGkAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T13:25:34.266Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T13:25:34.266Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "PlayerLiveLogic.cs",
               "DocumentMoniker": "C:\\Users\\mrshr\\SibJam2024\\Assets\\Scripts\\Player\\PlayerLiveLogic.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerLiveLogic.cs",
@@ -245,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "Map.cs",
               "DocumentMoniker": "C:\\Users\\mrshr\\SibJam2024\\Assets\\Scripts\\Map.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Map.cs",
@@ -257,7 +224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "C:\\Users\\mrshr\\SibJam2024\\Assets\\Scripts\\Player\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerMovement.cs",
@@ -269,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 11,
               "Title": "BuffSettings.cs",
               "DocumentMoniker": "C:\\Users\\mrshr\\SibJam2024\\Assets\\Scripts\\BuffS\\BuffSettings.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BuffS\\BuffSettings.cs",
@@ -281,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 13,
               "Title": "CameraConrtoller.cs",
               "DocumentMoniker": "C:\\Users\\mrshr\\SibJam2024\\Assets\\Scripts\\Player\\CameraConrtoller.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\CameraConrtoller.cs",
@@ -293,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 12,
               "Title": "Finish.cs",
               "DocumentMoniker": "C:\\Users\\mrshr\\SibJam2024\\Assets\\Scripts\\Finish.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Finish.cs",
