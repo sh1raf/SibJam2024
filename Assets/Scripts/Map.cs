@@ -13,5 +13,4 @@ public class Map : MonoBehaviour
         Chests.AddRange(GetComponentsInChildren<Chest>());
     }
 
-
 }

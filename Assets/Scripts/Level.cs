@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Level : MonoBehaviour
 {
+    [SerializeField] private LevelSO so;
+
     private void Awake()
     {
-        CreateDungeon(0);
-
+        SpawnDungeon(so.BaseHeroesAmount + so.AddedHeroesAmount, so.BaseRoomsAmount + so.AddedRoomsAmount);
+        so.AddedHeroesAmount = 0;
+        so.AddedRoomsAmount = 0;
     }
 
-    private void CreateDungeon(int HeroesAmount)
+    private void SpawnDungeon(int heroes, int rooms)
     {
 
     }

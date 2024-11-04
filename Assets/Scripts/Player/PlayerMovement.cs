@@ -84,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
     public void Freeze()
     {
         _animator.Play("Idle");
+        _movementDirection = Vector2.zero;
         _canMove = false;
     }
 

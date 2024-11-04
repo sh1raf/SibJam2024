@@ -14,6 +14,9 @@ public class PlayerEater : MonoBehaviour
 
     private PlayerMovement _movement;
     private SmokeHolder _holder;
+    private LevelsController _level;
+
+    private Animator _animator;
 
     private bool _canEat = true;
 
@@ -21,7 +24,8 @@ public class PlayerEater : MonoBehaviour
     {
         _movement = GetComponentInParent<PlayerMovement>();
         _holder = FindObjectOfType<SmokeHolder>();
-
+        _level = FindObjectOfType<LevelsController>();
+        _animator = GetComponentInParent<Animator>();
         _currentCooldown = defaultCooldown;
     }
 
@@ -33,13 +37,13 @@ public class PlayerEater : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<Hero>(out Hero hero))
+        if (collision.TryGetComponent(out Hero hero))
             _targets.Add(hero);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<Hero>(out Hero hero))
+        if (collision.TryGetComponent(out Hero hero))
         {
             if(_targets.Contains(hero))
                 _targets.Remove(hero);
@@ -47,18 +51,16 @@ public class PlayerEater : MonoBehaviour
     }
 
 
-    private void Eat()
+    private void Eat(Hero hero)
     {
         if (_targets.Count <= 0)
             return;
 
-        Hero hero = GetClosestHero();
-
-        switch(hero.Buff)
+        switch (hero.Buff)
         {
             case(Buff.Drunk):
                 {
-                    //_movement.Drunk();
+                    _movement.Drunk(hero.Settings.Duration);
                     break;
                 }
             case (Buff.Smoke):
@@ -78,6 +80,15 @@ public class PlayerEater : MonoBehaviour
                     _currentCooldown += settings.Multi;
                     break;
                 }
+            case (Buff.RoomsCount):
+                {
+                    
+                    break;
+                }
+            case (Buff.HeroesCount):
+                {
+                    break;
+                }
             default:
                 {
 
@@ -89,22 +100,31 @@ public class PlayerEater : MonoBehaviour
     }
     private IEnumerator Eating()
     {
-        _canEat = false;
+        Hero hero = GetClosestHero();
+        hero.Freeze();
+        if(hero != null)
+        {
+            _canEat = false;
+            _movement.Freeze();
 
-        _movement.Freeze();
-        yield return new WaitForSeconds(eatTime);
+            _animator.Play("Eat");
+            yield return new WaitForSeconds(eatTime);
 
-        Eat();
+            Eat(hero);
 
-        _movement.UnFreeze();
-        yield return new WaitForSeconds(_currentCooldown);
+            _movement.UnFreeze();
+            yield return new WaitForSeconds(_currentCooldown);
 
-        _canEat = true;
+            _canEat = true;
+        }
     }
 
 
     private Hero GetClosestHero()
     {
+        if(_targets.Count == 0) 
+            return null;
+
         float minDistance = Vector2.Distance(transform.position, _targets[0].transform.position);
         Hero hero = _targets[0];
         for(int i = 0; i < _targets.Count; i++)

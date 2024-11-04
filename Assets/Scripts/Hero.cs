@@ -12,12 +12,14 @@ public class Hero : MonoBehaviour
     private List<Transform> _path = new();
 
     private NavMeshAgent _agent;
+    private Animator _animator;
 
     private void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
         _agent.updateRotation = false;
         _agent.updateUpAxis = false;
+        _animator = GetComponent<Animator>();
         Settings = GetComponent<BuffSettings>();
         _map = FindObjectOfType<Map>();
         BuildRandomPath();
@@ -37,6 +39,17 @@ public class Hero : MonoBehaviour
         StartCoroutine(Going());
     }
 
+    public void Freeze()
+    {
+        GetComponent<SpriteRenderer>().enabled = false;
+        _agent.isStopped = true;
+    }
+
+    private void Detected()
+    {
+        
+    }
+
     private IEnumerator Going()
     {
         for(int i = 0; i < _path.Count; i++)
@@ -44,7 +57,47 @@ public class Hero : MonoBehaviour
             _agent.SetDestination(_path[i].position);
             while(Vector2.Distance(transform.position, _path[i].position) > 0.01f)
             {
-
+                Vector2 direction = new Vector2(_agent.desiredVelocity.x, _agent.desiredVelocity.y);
+                direction = direction.normalized;
+                if (direction.x > 0)
+                {
+                    if (direction.y > 0)
+                    {
+                        _animator.Play("Right-up");
+                    }
+                    else if (direction.y < 0)
+                    {
+                        _animator.Play("Right-down");
+                    }
+                    else
+                        _animator.Play("Right");
+                }
+                else if (direction.x < 0)
+                {
+                    if (direction.y > 0)
+                    {
+                        _animator.Play("Left-up");
+                    }
+                    else if (direction.y < 0)
+                    {
+                        _animator.Play("Left-down");
+                    }
+                    else
+                        _animator.Play("Left");
+                }
+                else
+                {
+                    if (direction.y > 0)
+                    {
+                        _animator.Play("Up");
+                    }
+                    else if (direction.y < 0)
+                    {
+                        _animator.Play("Down");
+                    }
+                    else
+                        _animator.Play("Idle");
+                }
                 yield return null;
             }
         }
@@ -57,5 +110,7 @@ public enum Buff
     Drunk,
     Smoke,
     SpeedBoost,
-    FoodQuality
+    FoodQuality,
+    RoomsCount,
+    HeroesCount
 }
