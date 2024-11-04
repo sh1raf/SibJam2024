@@ -1,16 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SmokeHolder : MonoBehaviour
 {
     [SerializeField] private KeyCode smokeKey;
     [SerializeField] private DestroyDelay smoke;
+    [SerializeField] private TMP_Text tmp;
 
     private int _smokeCounter;
+
+    private void Awake()
+    {
+        tmp.text = _smokeCounter.ToString();
+    }
+
     public void AddSmoke()
     {
         _smokeCounter++;
+        tmp.text = _smokeCounter.ToString();
     }
 
     private void Update()

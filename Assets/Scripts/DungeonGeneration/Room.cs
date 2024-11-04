@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Room : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Room : MonoBehaviour
     [SerializeField] private Chest chest;
 
     [SerializeField] private List<Room> gaps;
+    [SerializeField] private List<Hero> heroes;
 
     public Vector2 Size;
     public Transform End;
@@ -19,6 +21,7 @@ public class Room : MonoBehaviour
 
     public void GenerateNewDungeons(Transform parent)
     {
+
         for(int i = 0; i < exits.Count; i++)
         {
             Room room = Instantiate(gaps[i]);
@@ -27,6 +30,7 @@ public class Room : MonoBehaviour
 
             Chest chestt = Instantiate(chest);
             chestt.transform.parent = transform;
+
 
             switch (exits[i])
             {
@@ -54,15 +58,6 @@ public class Room : MonoBehaviour
             }
 
             chestt.transform.position = room.transform.position;
-        }
-        for(float i = Size.x/2; i < Size.x; i++)
-        {
-            for(float j = -Size.y/2; j < Size.y/2; j++)
-            {
-                Chest chestt = Instantiate(chest);
-                chestt.transform.parent = transform;
-                chestt.transform.localPosition = new Vector2(i, j);
-            }
         }
     }
 

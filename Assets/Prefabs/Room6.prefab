@@ -1981,7 +1981,13 @@ MonoBehaviour:
   chest: {fileID: 4711628190562411381, guid: 42c6615fd1b866a4fab5ec6781058fd4, type: 3}
   gaps:
   - {fileID: 8067246331747058241, guid: dc6eacc8c71744d4683b4a0c34e20344, type: 3}
+  heroes:
+  - {fileID: 2299420625084096471, guid: 846279ba497b9d549af910a400ef8c54, type: 3}
+  - {fileID: 960003222818429639, guid: b9a1b32667a45c94aa574cc4e2bcb579, type: 3}
+  - {fileID: 2299420625084096471, guid: f65ffbbb4165f1f46b52f0fd0cf0cdb7, type: 3}
+  - {fileID: 960003222818429639, guid: 0a0499a443c18594ab4c60917bb63b3b, type: 3}
   Size: {x: 11, y: 5.5}
+  End: {fileID: 0}
 --- !u!1 &1575737269368131188
 GameObject:
   m_ObjectHideFlags: 0

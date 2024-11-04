@@ -16,6 +16,8 @@ public class HeroFieldOfView : MonoBehaviour
     private Transform _target;
     private Hero _hero;
 
+    private bool _canFreeze = true;
+
     private void Start()
     {
         _hero = GetComponentInParent<Hero>();
@@ -36,6 +38,9 @@ public class HeroFieldOfView : MonoBehaviour
 
     private void FieldOfViewCheck()
     {
+        if (!_canFreeze)
+            return;
+
         Collider2D[] rangeChecks = Physics2D.OverlapCircleAll(transform.position, radius, playerMask);
 
         if (rangeChecks.Length != 0)
@@ -68,9 +73,15 @@ public class HeroFieldOfView : MonoBehaviour
         }
     }
 
+    public void Freeze()
+    {
+        _canFreeze = false;
+    }
+
     private void Check()
     {
-        _target.GetComponent<PlayerLiveLogic>().CheckMonster();
+        if(_target.GetComponent<PlayerLiveLogic>().CheckMonster())
+            _hero.PopUp();
     }
 
     private void OnDrawGizmos()

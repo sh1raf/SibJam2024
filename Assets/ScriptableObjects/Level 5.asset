@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f135545d45bbb184384a142912aa31a7, type: 3}
   m_Name: Level 5
   m_EditorClassIdentifier: 
-  RoomsAmount: 29
-  HeroesAmount: 9
+  BaseRoomsAmount: 15
+  BaseHeroesAmount: 14
+  AddedHeroesAmount: 0
+  AddedRoomsAmount: 0

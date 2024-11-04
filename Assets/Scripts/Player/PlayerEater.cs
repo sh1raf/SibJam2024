@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerEater : MonoBehaviour
@@ -7,6 +8,7 @@ public class PlayerEater : MonoBehaviour
     [SerializeField] private KeyCode eatKey;
     [SerializeField] private float defaultCooldown;
     [SerializeField] private float eatTime;
+    [SerializeField] private TMP_Text tmp;
 
     private float _currentCooldown;
 
@@ -21,6 +23,11 @@ public class PlayerEater : MonoBehaviour
     private ScoreController _scoreController;
 
     private bool _canEat = true;
+
+    private int _counter;
+
+
+    public bool IsEating { get; private set; }
 
     private void Awake()
     {
@@ -99,7 +106,8 @@ public class PlayerEater : MonoBehaviour
                     break;
                 }
         }
-
+        _counter++;
+        tmp.text = _counter.ToString();
         Destroy(hero.gameObject);
     }
     private IEnumerator Eating()
@@ -112,7 +120,9 @@ public class PlayerEater : MonoBehaviour
             _movement.Freeze();
 
             _animator.Play("Eat");
+            IsEating = true;
             yield return new WaitForSeconds(eatTime);
+            IsEating = false;
 
             Eat(hero);
 

@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RestartButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Button _button;
+    private void OnEnable()
     {
-        
+        _button = GetComponent<Button>();
+        _button.onClick.AddListener(FindObjectOfType<SceneLoader>().LoadFirstLevel);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        _button.onClick.RemoveAllListeners();
     }
 }

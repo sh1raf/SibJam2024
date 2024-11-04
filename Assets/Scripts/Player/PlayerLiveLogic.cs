@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerLiveLogic : MonoBehaviour
@@ -7,6 +8,7 @@ public class PlayerLiveLogic : MonoBehaviour
     [SerializeField] private int maxHealth;
     [SerializeField] private float freezeCooldown;
     [SerializeField] private DestroyDelay dieAnimation;
+    [SerializeField] private TMP_Text tmp;
 
     private int _currentHealth;
 
@@ -14,13 +16,16 @@ public class PlayerLiveLogic : MonoBehaviour
 
     private PlayerMovement _playerMovement;
     private DungeonGenerator _map;
+    private PlayerEater _eater;
 
     private void Awake()
     {
         _map = FindObjectOfType<DungeonGenerator>();
         _playerMovement = GetComponent<PlayerMovement>();
+        _eater = GetComponentInChildren<PlayerEater>();
 
         _currentHealth = maxHealth;
+        tmp.text = _currentHealth.ToString();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,13 +46,14 @@ public class PlayerLiveLogic : MonoBehaviour
 
     public bool CheckMonster()
     {
-        if (_playerMovement.MovementDirection != Vector2.zero && _smokeCount == 0)
+        if ((_playerMovement.MovementDirection != Vector2.zero || _eater.IsEating) && _smokeCount == 0)
         {
             _currentHealth--;
+            tmp.text = _currentHealth.ToString();
 
             if(_currentHealth <=0)
             {
-
+                FindObjectOfType<LevelsController>().LevelFailed();
             }
             else
             {

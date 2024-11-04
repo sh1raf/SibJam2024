@@ -14,9 +14,13 @@ public class SceneLoader : MonoBehaviour
     private Animator _animator;
 
     private bool _sceneClossing = false;
+
+    private LevelsController _controller;
     private void Awake()
     {
+        DontDestroyOnLoad(this);
         _animator = loadScreen.GetComponent<Animator>();
+        _controller = FindObjectOfType<LevelsController>();
 
         loadScreen.SetActive(false);
     }
@@ -35,6 +39,25 @@ public class SceneLoader : MonoBehaviour
     public void LoadMenu()
     {
         LoadScene(0);
+        _controller.OnMenu();
+    }
+
+    public void LoadNextLevel()
+    {
+        if (_controller.CurrentLevelNumber + 1 == 5)
+        {
+            LoadScene(0);
+            return;
+        }
+
+        LoadScene(_controller.CurrentLevelNumber + 1);
+        _controller.OnNextLevel();
+    }
+
+    public void LoadFirstLevel()
+    {
+        LoadScene(1);
+        _controller.OnRestartFirstLevel();
     }
 
     public void LoadScene(int SceneNumber)

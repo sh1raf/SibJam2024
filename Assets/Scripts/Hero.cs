@@ -7,6 +7,7 @@ public class Hero : MonoBehaviour
 {
     [field: SerializeField] public Buff Buff { get; private set; } = Buff.None;
     public BuffSettings Settings { get; private set; }
+    [SerializeField] private GameObject popUp;
     private DungeonGenerator _map;
 
     private List<Transform> _path = new();
@@ -29,15 +30,18 @@ public class Hero : MonoBehaviour
 
     private IEnumerator Initialize()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
 
         BuildRandomPath();
     }
 
     private void BuildRandomPath()
     {
-        List<int> NoUsedIndexes = new List<int>{0,1,2,3,4,5,6,7,8,9 };
-        for(int i = 0; i < _map.Chests.Count; i++)
+        if (_map.Chests.Count == 0)
+            return;
+
+        List<int> NoUsedIndexes = new List<int>{1,3,4,2};
+        for(int i = 0; i < NoUsedIndexes.Count; i++)
         {
             int randomIndex = Random.Range(0, NoUsedIndexes.Count);
             _path.Add(_map.Chests[NoUsedIndexes[randomIndex]].transform);
@@ -48,9 +52,16 @@ public class Hero : MonoBehaviour
         StartCoroutine(Going());
     }
 
+    public void PopUp()
+    {
+        Instantiate(popUp, transform.position + new Vector3(0,1, 0), Quaternion.identity);
+    }
+
     public void Freeze()
     {
-        GetComponent<SpriteRenderer>().enabled = false;
+        foreach(var rend in GetComponentsInChildren<SpriteRenderer>())
+            rend.enabled = false;
+        GetComponentInChildren<HeroFieldOfView>().Freeze();
         _agent.isStopped = true;
         _agent.SetDestination(transform.position);
     }

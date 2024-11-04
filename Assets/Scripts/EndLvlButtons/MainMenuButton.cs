@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class MainMenuButton : MonoBehaviour
 {
-    private void Awake()
+    private Button _button;
+    private void OnEnable()
     {
-        var component = GetComponent<Button>();
-        .onClick.AddListener(FindObjectOfType<SceneLoader>().LoadScene(0));
+        _button= GetComponent<Button>();
+        _button.onClick.AddListener(FindObjectOfType<SceneLoader>().LoadMenu);
     }
 
     private void OnDisable()
     {
-        GetComponent<Button>().RemoveAllListeners();
+        _button.onClick.RemoveAllListeners();
     }
 }

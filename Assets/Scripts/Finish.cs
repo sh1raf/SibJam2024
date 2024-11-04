@@ -8,14 +8,14 @@ public class Finish : MonoBehaviour
 
     private void Awake()
     {
-        _controller = GetComponent<LevelsController>();
+        _controller = FindObjectOfType<LevelsController>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
             FindObjectOfType<LevelsController>().LevelComplete();
-        else
-            _controller.LevelFailed();
+        else if (collision.CompareTag("Heroes"))
+            Destroy(collision.gameObject);
     }
 }
