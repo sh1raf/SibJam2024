@@ -29,7 +29,7 @@ public class PlayerEater : MonoBehaviour
         _level = FindObjectOfType<LevelsController>();
         _animator = GetComponentInParent<Animator>();
         _currentCooldown = defaultCooldown;
-        _scoreController = new ScoreController();
+        _scoreController = gameObject.GetComponent<ScoreController>();
     }
 
     private void Update()
@@ -60,6 +60,7 @@ public class PlayerEater : MonoBehaviour
             return;
 
         _scoreController.AddEatScore();
+        _scoreController.EditMultiplier(1.5f, 10);
 
         switch (hero.Buff)
         {
