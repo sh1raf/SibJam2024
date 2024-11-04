@@ -101,9 +101,9 @@ public class PlayerEater : MonoBehaviour
     private IEnumerator Eating()
     {
         Hero hero = GetClosestHero();
-        hero.Freeze();
         if(hero != null)
         {
+            hero.Freeze();
             _canEat = false;
             _movement.Freeze();
 
