@@ -14,9 +14,11 @@ public class HeroFieldOfView : MonoBehaviour
 
     private bool _canSeePlayer;
     private Transform _target;
+    private Hero _hero;
 
     private void Start()
     {
+        _hero = GetComponentInParent<Hero>();
         _target = FindObjectOfType<PlayerMovement>().transform;
         StartCoroutine(FOVRoutine());
     }
@@ -41,7 +43,7 @@ public class HeroFieldOfView : MonoBehaviour
             Transform target = rangeChecks[0].transform;
             Vector3 directionToTarget = (target.position - transform.position).normalized;
 
-            if (Vector2.Angle(transform.up, directionToTarget) < angle / 2)
+            if (Vector2.Angle(_hero.Direction, directionToTarget) < angle / 2)
             {
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
@@ -75,6 +77,8 @@ public class HeroFieldOfView : MonoBehaviour
     {
         if(_canSeePlayer)
             Gizmos.DrawRay(transform.position, _target.position - transform.position);
+        if(_hero != null)
+            Gizmos.DrawRay(transform.position, _hero.Direction);
     }
 
     private void Find()
