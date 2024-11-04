@@ -64,9 +64,9 @@ public class PlayerLiveLogic : MonoBehaviour
         Chest chest = _map.Chests[Random.Range(0, _map.Chests.Count)];
         Vector2 position = chest.transform.position;
         chest.gameObject.SetActive(false);
+        Camera.main.GetComponent<CameraConrtoller>().Freeze();
         Instantiate(dieAnimation, transform.position, Quaternion.identity);
         transform.position = position;
-
         StartCoroutine(FreezeCooldown());
     }
 

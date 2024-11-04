@@ -14,6 +14,8 @@ public class Hero : MonoBehaviour
     private NavMeshAgent _agent;
     private Animator _animator;
 
+    public Vector2 Direction { get; private set; }
+
     private void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
@@ -59,6 +61,7 @@ public class Hero : MonoBehaviour
             {
                 Vector2 direction = new Vector2(_agent.desiredVelocity.x, _agent.desiredVelocity.y);
                 direction = direction.normalized;
+                Direction = direction;
                 if (direction.x > 0)
                 {
                     if (direction.y > 0)

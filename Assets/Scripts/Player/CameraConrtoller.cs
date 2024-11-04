@@ -7,15 +7,19 @@ public class CameraConrtoller : MonoBehaviour
     [SerializeField] private float maxDistanceToTarget;
     [SerializeField] private float camSpeed;   
     [SerializeField] private Transform _target;
+    [SerializeField] private float freezeTime;
 
     private bool _focusing;
 
-    private const float DISTANCE_TRESHOLD = 0.001f;
+    private bool _canFocus = true;
 
     private Vector2 _camPos { get { return new Vector2(transform.position.x, transform.position.y); }}
 
     private void LateUpdate()
     {
+        if(!_canFocus)
+            return;
+
         float distance = Vector2.Distance(_camPos, _target.position);
         if(distance > maxDistanceToTarget && !_focusing)
         {
@@ -35,5 +39,19 @@ public class CameraConrtoller : MonoBehaviour
         }
 
         _focusing = false;
+    }
+
+    public void Freeze()
+    {
+        StartCoroutine(Freezing());
+    }
+
+    private IEnumerator Freezing()
+    {
+        _canFocus = false;
+
+        yield return new WaitForSeconds(freezeTime);
+
+        _canFocus = true;
     }
 }

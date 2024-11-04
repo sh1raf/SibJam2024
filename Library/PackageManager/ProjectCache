@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638662984823498969
-    m_Hash: 2933350782
+      ticks: 638663034478199326
+    m_Hash: 59278749
   m_LockFileStatus:
     m_FilePath: C:/Users/mrshr/SibJam2024/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638662985992818921
-    m_Hash: 3747329128
+      ticks: 638663036677355913
+    m_Hash: 3357439718
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
