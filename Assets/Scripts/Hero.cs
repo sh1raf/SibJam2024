@@ -45,6 +45,7 @@ public class Hero : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().enabled = false;
         _agent.isStopped = true;
+        _agent.SetDestination(transform.position);
     }
 
     private void Detected()

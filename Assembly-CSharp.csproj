@@ -65,9 +65,11 @@
     <Compile Include="Assets\Scripts\BuffS\SettingsWithMulti.cs" />
     <Compile Include="Assets\Scripts\Player\CameraConrtoller.cs" />
     <Compile Include="Assets\Scripts\Map.cs" />
+    <Compile Include="Assets\Scripts\DungeonGeneration\DungeonGenerator.cs" />
     <Compile Include="Assets\Scripts\Finish.cs" />
     <Compile Include="Assets\Scripts\HeroFieldOfView.cs" />
     <Compile Include="Assets\Scripts\Hero.cs" />
+    <Compile Include="Assets\Scripts\DungeonGeneration\Room.cs" />
     <Compile Include="Assets\Scripts\Level.cs" />
     <Compile Include="Assets\Scripts\LevelSO.cs" />
     <Compile Include="Assets\Scripts\LevelsController.cs" />
